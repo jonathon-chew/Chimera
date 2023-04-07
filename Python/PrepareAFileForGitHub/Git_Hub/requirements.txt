@@ -1,0 +1,4 @@
+from genericpath import isfile
+import os
+import shutil
+if "import " in everyLine:
