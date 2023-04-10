@@ -1,3 +1,4 @@
+#!/Library/Frameworks/Python.framework/Versions/3.11/bin/python3
 import os
 
 location = input (f"Where is the folder that you would like to tidy? ")

@@ -1,3 +1,4 @@
+#!/Library/Frameworks/Python.framework/Versions/3.11/bin/python3
 import os
 import os.path
 import time
