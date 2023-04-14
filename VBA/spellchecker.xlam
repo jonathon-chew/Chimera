@@ -1,0 +1,26 @@
+Public Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Source As Range)
+
+If Application.WorksheetFunction.IsText(Source) Then
+
+spellingCheck = Split(Source, " ")
+
+    For Each spelling In spellingCheck
+
+        If Not Application.CheckSpelling(Word:=spelling) Then
+
+            startLocation = InStr(1, Source, spelling, vbBinaryCompare)
+
+            With Source.Characters(Start:=startLocation, 
+Length:=Len(spelling))
+
+                .Font.Color = RGB(255, 0, 0)
+
+            End With
+
+        End If
+
+    Next
+
+End If
+
+End Sub
