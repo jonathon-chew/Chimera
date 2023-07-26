@@ -14,7 +14,7 @@ if (timePlayer === totalTime){
     nextVideo.click()
 }  
   
-}, 500)
+}, 100)
 
 
 }
