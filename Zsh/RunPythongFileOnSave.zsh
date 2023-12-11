@@ -15,7 +15,6 @@ then;
       oldTime=$lastModificationSeconds;
       echo $(date)
       python3 $file ;
-      sleep 2
     fi;
   done;
 #else;
