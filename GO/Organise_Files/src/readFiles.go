@@ -21,7 +21,6 @@ func main() {
 	var folder string
 
 	//state the place you want to make the new folders by file extention type
-	// var folder string = "/Users/hunteradder626/Desktop/"
 	if userChoice[len(userChoice)-1:] != "/" {
 		folder = userChoice + "/"
 	} else {
