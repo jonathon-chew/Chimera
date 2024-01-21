@@ -1,1 +1,1 @@
-function lastlogedon() {Search-ADAccount -UsersOnly -SearchBase "OU=Sites,DC=medway,DC=nhs,DC=uk" -AccountDisabled:$false | Get-ADUser -Properties Name, SamAccountName, LastLogon | Select Name, SamAccountName, @{N='LastLogon'; E={[DateTime]::FromFileTime($_.LastLogon)}}}
+function lastlogedon() {Search-ADAccount -UsersOnly -SearchBase "" -AccountDisabled:$false | Get-ADUser -Properties Name, SamAccountName, LastLogon | Select Name, SamAccountName, @{N='LastLogon'; E={[DateTime]::FromFileTime($_.LastLogon)}}}
