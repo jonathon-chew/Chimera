@@ -9,8 +9,14 @@ for (let index = 1; index < 15; index++) {
   for (let i = 0; i < bookTitles.length; i++) {
     let bookTitle = bookTitles[i];
 
-		allBookTitles.push(bookTitle.innerHTML)
+      allBookTitles.push(bookTitle.innerHTML)
 
   }
+  
+}
+
+for (let eachBookTitle = 1; eachBookTitle < allBookTitles.length + 1; eachBookTitle++){
+  
+  console.log(allBookTitles[eachBookTitle])
   
 }
