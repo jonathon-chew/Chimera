@@ -1,3 +1,5 @@
+//Whilst this does work, this has been replaced with the ability to read the xml file from the Kindle app
+
 let allBookTitles = []
 
 for (let index = 1; index < 15; index++) {
@@ -15,8 +17,4 @@ for (let index = 1; index < 15; index++) {
   
 }
 
-for (let eachBookTitle = 1; eachBookTitle < allBookTitles.length + 1; eachBookTitle++){
-  
-  console.log(allBookTitles[eachBookTitle])
-  
-}
+console.log(allBookTitles.join(", "))
