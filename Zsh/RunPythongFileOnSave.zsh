@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-#file=/Users/hunteradder626/Library/CloudStorage/OneDrive-Personal/Home/Finance/Finance.py
-
 file=$1
 if [ $1 ];
 then;
@@ -15,6 +13,7 @@ then;
       oldTime=$lastModificationSeconds;
       echo $(date)
       python3 $file ;
+      sleep 2
     fi;
   done;
 #else;
