@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $1 ];
+then
+git init
+git add -A
+git commit -m 'BATMAN'
+git remote add origin $1
+git push -u -f origin main
+else
+  echo "Please enter a github website address to send this to"
+fi
