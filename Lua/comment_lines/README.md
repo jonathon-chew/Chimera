@@ -16,3 +16,6 @@ local comment_markers = {
 
 Add an item to the list here which follows the schema opening tag, closing tag.
 If the language doesn't require a closing tag the second value should be nil.
+
+comment_marker .. current_line -> if you add comment_marker .. " " .. current_line adds a space between the comment and the line
+

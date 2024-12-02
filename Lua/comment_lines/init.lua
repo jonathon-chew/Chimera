@@ -35,10 +35,10 @@ function M.comment_lines(count)
         local current_line = vim.api.nvim_buf_get_lines(buf, line, line + 1, false)[1]
         if line == end_line and close_marker then
             -- Add both the opening and closing marker to the last line
-            vim.api.nvim_buf_set_lines(buf, line, line + 1, false, { comment_marker .. " " .. current_line .. " " .. close_marker })
+            vim.api.nvim_buf_set_lines(buf, line, line + 1, false, { comment_marker .. current_line .. " " .. close_marker })
         else
             -- Add only the opening marker to other lines
-            vim.api.nvim_buf_set_lines(buf, line, line + 1, false, { comment_marker .. " " .. current_line })
+            vim.api.nvim_buf_set_lines(buf, line, line + 1, false, { comment_marker .. current_line })
         end
     end
 end
@@ -47,7 +47,7 @@ end
 vim.api.nvim_create_user_command(
     "CommentLines",
     function(opts)
-        M.comment_lines(tonumber(opts.args))
+        M.comment_lines(tonumber(opts.args)+1)
     end,
     { nargs = 1 } -- Requires exactly one argument (number of lines)
 )
