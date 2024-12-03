@@ -28,7 +28,7 @@ function M.comment_lines(count)
     local comment_marker, close_marker = markers[1], markers[2]
 
     -- Calculate the end line based on the count
-    local end_line   = math.min(start_line + count - 1, vim.api.nvim_buf_line_count(buf) - 1)
+    local end_line   = math.min(start_line + count, vim.api.nvim_buf_line_count(buf))
 
     -- Loop through the lines and prepend the comment marker
     for line = start_line, end_line do
@@ -47,7 +47,7 @@ end
 vim.api.nvim_create_user_command(
     "CommentLines",
     function(opts)
-        M.comment_lines(tonumber(opts.args)+1)
+        M.comment_lines(tonumber(opts.args))
     end,
     { nargs = 1 } -- Requires exactly one argument (number of lines)
 )
