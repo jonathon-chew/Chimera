@@ -1,0 +1,10 @@
+#!/opt/homebrew/bin/bash
+
+if [ $# -gt 0 ];
+then
+  git add .
+  git commit -m "$*"
+  git push
+else
+  echo "[ERROR]: No commit messages was submitted"
+fi
