@@ -8,9 +8,10 @@ alphabetList = []
 for eachLetter in alphabet:
     alphabetList.append(eachLetter)
 
-file = ""
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file = os.path.join(script_dir, "Fake Data.csv")
 
-orgionalFile = pd.read_csv("")
+orgionalFile = pd.read_csv(file)
 
 rowNumbers = len(orgionalFile.index)
 
@@ -132,4 +133,4 @@ for eachRow in range(0,10):
 
 print (orgionalFile)
 
-orgionalFile.to_csv("/Users/hunteradder626/Documents/Csv/Fake Data.csv", index=False)
+orgionalFile.to_csv(file, index=False)
