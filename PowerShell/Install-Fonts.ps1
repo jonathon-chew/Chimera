@@ -1,6 +1,15 @@
 #Change font folder to the destination the fonts live in.
-    $FontFolder = ""
-    $FontItem = Get-Item -Path $FontFolder
+    param(
+        [string]$FontFolder = ""
+    )
+    
+    try {
+        $FontItem = Get-Item -Path $FontFolder
+    } catch{
+        Write-Host "Unable to find folder $FontFolder"
+        exit(1)
+    }
+
     $FontList = Get-ChildItem -Path "$FontItem\*" -Include ('*.fon','*.otf','*.ttc','*.ttf')
  
     foreach ($Font in $FontList) 
