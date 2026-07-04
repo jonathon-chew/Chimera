@@ -1,6 +1,6 @@
 import os
 
-file = "/Users/hunteradder626/Library/CloudStorage/OneDrive-Personal/Documents/Scripts/VBA/Cheat_Sheets/VBA-Cheat-Sheet.txt"
+file = "/Users/hunteradder626/Projects/VBA/Cheat_Sheets/VBA-Cheat-Sheet.txt"
 
 with open (file, 'r') as f:
     contents = f.read()
@@ -16,7 +16,7 @@ for i, x in enumerate(splitContents):
         prevInt = i
         subprocesses.append(mars)
 
-os.chdir("/Users/hunteradder626/Library/CloudStorage/OneDrive-Personal/Documents/Scripts/VBA/Cheat_Sheets/Subs")
+os.chdir("/Users/hunteradder626/Projects/VBA/Cheat_Sheets/Subs")
 
 for p, i in enumerate(subprocesses):
     fileName = subprocesses[p].split("\n")

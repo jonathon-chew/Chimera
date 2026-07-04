@@ -1,4 +1,4 @@
-Adonis @ file:///Users/hunteradder626/Documents/Scripts/Git/Public/Adonis
+Adonis @ file:///Users/hunteradder626/Projects/Git/Public/Adonis
 contourpy==1.3.3
 cycler==0.12.1
 fonttools==4.62.1
@@ -10,7 +10,7 @@ packaging==26.2
 pandas==3.0.2
 pillow==12.2.0
 plotly==6.7.0
-pyflags @ file:///Users/hunteradder626/Documents/Scripts/Git/Public/pyflags
+pyflags @ file:///Users/hunteradder626/Projects/Git/Public/pyflags
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 six==1.17.0
